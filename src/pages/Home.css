@@ -1,0 +1,118 @@
+.hero-section {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+  padding: 6rem 0;
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at top right, rgba(79, 70, 229, 0.1), transparent 40%);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 2.5rem;
+  color: #1e1b4b;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  box-shadow: var(--shadow-lg);
+}
+
+.search-input-group {
+  flex: 1;
+}
+
+.search-select {
+  height: 54px;
+  font-size: 1.1rem;
+  border: none;
+  background-color: transparent;
+  padding-left: 1.5rem;
+  font-weight: 500;
+}
+
+.search-select:focus {
+  box-shadow: none;
+}
+
+.search-btn {
+  height: 54px;
+  padding: 0 2rem;
+  font-size: 1.1rem;
+  border-radius: 9999px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-main);
+  font-weight: 800;
+}
+
+.categories-section {
+  margin-bottom: 4rem;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.category-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.recent-listings-section {
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.5rem; }
+  .search-form { flex-direction: column; border-radius: var(--border-radius); padding: 1rem; }
+  .search-select { padding-left: 0.5rem; border-bottom: 1px solid var(--border-color); border-radius: 0; }
+  .search-btn { width: 100%; border-radius: var(--border-radius-sm); }
+}
